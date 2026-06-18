@@ -2,10 +2,18 @@
 
 use App\Http\Controllers\ProfileController;
 use Illuminate\Support\Facades\Route;
+use Illuminate\Support\Facades\Auth;
 
 Route::get('/', function () {
-    return view('welcome');
-});
+
+    if (Auth::check()) {
+        $chapters = Auth::user()->chapters()->latest()->get();
+    }
+
+    return view('home', [
+        'chapters' =>  $chapters ?? [],
+    ]);
+})->name('home');
 
 Route::get('/dashboard', function () {
     return view('dashboard');
@@ -17,4 +25,4 @@ Route::middleware('auth')->group(function () {
     Route::delete('/profile', [ProfileController::class, 'destroy'])->name('profile.destroy');
 });
 
-require __DIR__.'/auth.php';
+require __DIR__ . '/auth.php';

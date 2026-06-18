@@ -1,0 +1,125 @@
+@use "screen" as *;
+@use "variables" as *;
+@use "extensions" as *;
+
+@import "@tabler/icons-webfont/dist/tabler-icons.scss";
+@import "bootstrap";
+@import url("https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,100..1000;1,9..40,100..1000&display=swap&display=swap");
+
+body {
+    font-family:
+        dm sans,
+        sans-serif;
+
+    background-color: map-get($map: $body, $key: "background");
+    color: map-get($map: $body, $key: "color");
+
+    h1,
+    h2,
+    h3,
+    h4,
+    h5,
+    h6 {
+        font-weight: 400;
+        color: map-get($map: $headers, $key: "color");
+
+        width: fit-content !important;
+    }
+
+    h4,
+    h5,
+    h6 {
+        border-bottom: 2px solid map-get($map: $body, $key: "border");
+    }
+
+    i {
+        font-size: 1.2rem;
+    }
+
+    a,
+    button,
+    button[type="submit"],
+    input[type="submit"] {
+        background-color: map-get($map: $button, $key: "background");
+        color: map-get($map: $button, $key: "color");
+
+        padding: 8px 16px;
+        border-radius: 12px;
+        width: fit-content !important;
+
+        outline: unset;
+        border: unset;
+
+        transition: 200ms all;
+
+        text-decoration: none;
+        font-weight: 600;
+
+        &:hover {
+            background-color: map-get($map: $button, $key: "hover");
+        }
+
+        &:active {
+            background-color: map-get($map: $button, $key: "active");
+        }
+
+        &.login {
+            border-top-right-radius: 0;
+            border-bottom-right-radius: 0;
+
+            border-right: 2px solid map-get($map: $body, $key: "border");
+        }
+
+        &.register {
+            border-top-left-radius: 0;
+            border-bottom-left-radius: 0;
+        }
+    }
+
+    input[type="text"],
+    input[type="email"],
+    input[type="password"],
+    textarea {
+        background-color: map-get($map: $textinput, $key: "background");
+        color: unset;
+
+        border: unset;
+        border-radius: 12px;
+
+        border-bottom: 2px solid map-get($map: $body, $key: "border");
+
+        box-shadow: 0 5px 20px rgba(0, 0, 0, 0.041) inset;
+
+        padding: 8px 16px;
+        width: 100%;
+    }
+
+    form {
+        background-color: map-get($map: $form, $key: "background");
+        color: map-get($map: $form, $key: "color");
+
+        border-radius: 12px;
+        box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
+    }
+
+    div.row:has(form:not(#logout-form)) {
+        height: 60vh;
+    }
+}
+
+header {
+    background-color: map-get($map: $headers, $key: "background");
+
+    border-bottom: 2px solid map-get($map: $body, $key: "border");
+
+    h3 {
+        font-weight: 600;
+    }
+
+    a:has(.ti-book-2):hover,
+    a:has(.ti-book-2):hover *,
+    a:has(.ti-book-2):active,
+    a:has(.ti-book-2):active * {
+        color: map-get($map: $button, $key: "color-hover");
+    }
+}

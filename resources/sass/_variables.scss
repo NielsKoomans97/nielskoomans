@@ -1,0 +1,38 @@
+$colors: (
+    "success": #2dce89,
+    "danger": #f5365c,
+    "warning": #fb6340,
+    "info": #11cdef,
+    "light": #f8f9fe,
+    "dark": #212529
+);
+
+$body:(
+    'background': #deecfa,
+    'color': #3d5369,
+    'border': #6887ad,
+);
+
+$form:(
+    'background': #f5f9fc,
+    'color': #3d5369,
+    'border': #6887ad,
+);
+
+$button: (
+    'background': #bbd1e7,
+    'hover': #a0bedd,
+    'active': #7ca9d6,
+    'color': #3d5369,
+    'color-hover': #f5f9fc,
+);
+
+$textinput:(
+    'background': #deecfa,
+    'color': #3d5369,
+);
+
+$headers: (
+    "background": #f5f9fc,
+    "color": #3d5369
+);
