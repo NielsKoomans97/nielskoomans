@@ -31,11 +31,12 @@
                                     <i class="ti ti-user"></i>
                                     {{ Auth::user()->name }}
                                 </a>
+                                
                                 <a href="{{ route('logout') }}" class="d-flex align-items-center gap-3"
                                     onclick="event.preventDefault(); document.getElementById('logout-form').submit();">
                                     <i class="ti ti-logout"></i>
-
                                 </a>
+
                                 <form id="logout-form" action="{{ route('logout') }}" method="POST" style="display: none;">
                                     @csrf
                                 </form>

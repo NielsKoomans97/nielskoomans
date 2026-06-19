@@ -1,4 +1,4 @@
-@import url(https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,100..1000;1,9..40,100..1000&display=swap&display=swap);
+@import url(https://fonts.googleapis.com/css2?family=Quicksand:wght@300..700&display=swap);
 @charset "UTF-8";
 /*!
  * Tabler Icons 3.44.0 by tabler - https://tabler.io
@@ -32716,7 +32716,7 @@ textarea.form-control-lg {
   }
 }
 body {
-  font-family: dm sans, sans-serif;
+  font-family: quicksand, sans-serif;
   background-color: #deecfa;
   color: #3d5369;
 }

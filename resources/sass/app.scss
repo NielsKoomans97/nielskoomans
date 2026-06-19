@@ -4,11 +4,11 @@
 
 @import "@tabler/icons-webfont/dist/tabler-icons.scss";
 @import "bootstrap";
-@import url("https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,100..1000;1,9..40,100..1000&display=swap&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Quicksand:wght@300..700&display=swap");
 
 body {
     font-family:
-        dm sans,
+        quicksand,
         sans-serif;
 
     background-color: map-get($map: $body, $key: "background");

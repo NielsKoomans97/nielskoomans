@@ -32,11 +32,12 @@
                                     <?php echo e(Auth::user()->name); ?>
 
                                 </a>
+                                
                                 <a href="<?php echo e(route('logout')); ?>" class="d-flex align-items-center gap-3"
                                     onclick="event.preventDefault(); document.getElementById('logout-form').submit();">
                                     <i class="ti ti-logout"></i>
-
                                 </a>
+
                                 <form id="logout-form" action="<?php echo e(route('logout')); ?>" method="POST" style="display: none;">
                                     <?php echo csrf_field(); ?>
                                 </form>
