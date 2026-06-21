@@ -20,7 +20,7 @@ class ChapterController extends Controller
      */
     public function create()
     {
-        //
+        return view('chapters.item');
     }
 
     /**
@@ -36,7 +36,9 @@ class ChapterController extends Controller
      */
     public function show(Chapter $chapter)
     {
-        //
+        return view('chapters.item', [
+            'chapter' => $chapter,
+        ]);
     }
 
     /**
@@ -44,7 +46,9 @@ class ChapterController extends Controller
      */
     public function edit(Chapter $chapter)
     {
-        //
+        return view('chapters.item', [
+            'chapter' => $chapter,
+        ]);
     }
 
     /**

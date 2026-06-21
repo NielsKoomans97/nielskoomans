@@ -32772,7 +32772,7 @@ body a:active,
 body button:active,
 body button[type=submit]:active,
 body input[type=submit]:active {
-  background-color: #7ca9d6;
+  background-color: #4b82ba;
 }
 body a.login,
 body button.login,
@@ -32801,12 +32801,37 @@ body textarea {
   box-shadow: 0 5px 20px rgba(0, 0, 0, 0.041) inset;
   padding: 8px 16px;
   width: 100%;
+  transition: 200ms all;
+}
+body input[type=text]:focus, body input[type=text]:active,
+body input[type=email]:focus,
+body input[type=email]:active,
+body input[type=password]:focus,
+body input[type=password]:active,
+body textarea:focus,
+body textarea:active {
+  outline: unset;
+  border-color: #bbd1e7;
+}
+body input[type=text].inverted,
+body input[type=email].inverted,
+body input[type=password].inverted,
+body textarea.inverted {
+  background-color: #f5f9fc;
+}
+body label {
+  display: block;
+  margin-bottom: 4px;
 }
 body form {
   background-color: #f5f9fc;
   color: #3d5369;
   border-radius: 12px;
   box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
+}
+body form.background-less {
+  background-color: transparent;
+  box-shadow: unset;
 }
 body div.row:has(form:not(#logout-form)) {
   height: 60vh;

@@ -20,7 +20,7 @@
                                 <label for="name" class="form-label">
                                     <small><b>Naam</b></small>
                                 </label>
-                                <input type="text" name="name" id="name" class="form-control mb-1" required
+                                <input type="text" name="name" id="name" class="mb-1" required
                                     autofocus>
                                 <?php $__errorArgs = ['name'];
 $__bag = $errors->getBag($__errorArgs[1] ?? 'default');
@@ -41,7 +41,7 @@ unset($__errorArgs, $__bag); ?>
                                 <label for="email" class="form-label">
                                     <small><b>E-mailadres</b></small>
                                 </label>
-                                <input type="email" name="email" id="email" class="form-control mb-1" required
+                                <input type="email" name="email" id="email" class="mb-1" required
                                     autofocus>
                                 <?php $__errorArgs = ['email'];
 $__bag = $errors->getBag($__errorArgs[1] ?? 'default');
@@ -61,7 +61,7 @@ unset($__errorArgs, $__bag); ?>
                                 <label for="password" class="form-label">
                                     <small><b>Wachtwoord</b></small>
                                 </label>
-                                <input type="password" name="password" id="password" class="form-control mb-1" required>
+                                <input type="password" name="password" id="password" class="mb-1" required>
                                 <?php $__errorArgs = ['password'];
 $__bag = $errors->getBag($__errorArgs[1] ?? 'default');
 if ($__bag->has($__errorArgs[0])) :
@@ -81,7 +81,7 @@ unset($__errorArgs, $__bag); ?>
                                     <small><b>Bevestig Wachtwoord</b></small>
                                 </label>
                                 <input type="password" name="password_confirmation" id="password_confirmation"
-                                    class="form-control mb-1" required>
+                                    class="mb-1" required>
                                 <?php $__errorArgs = ['password_confirmation'];
 $__bag = $errors->getBag($__errorArgs[1] ?? 'default');
 if ($__bag->has($__errorArgs[0])) :

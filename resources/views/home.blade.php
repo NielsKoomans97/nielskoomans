@@ -3,10 +3,15 @@
 @section('content')
     <div class="container">
         <div class="col flex-column">
+            @auth
+                <div class="row pt-2 toolstrip">
+                    <a href="{{ route('chapters.create') }}">
+                        <i class="ti ti-playlist-add"></i> Nieuw hoofdstuk
+                    </a>
+                </div>
+            @endauth
+
             <div class="row pt-3">
-                <h4 class="padding">Hoofdstukken</h4>
-            </div>
-            <div class="row padding-y">
                 @auth
                     @foreach ($chapters as $chapter)
                         <div class="col-md-4 mb-4">

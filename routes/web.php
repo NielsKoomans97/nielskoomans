@@ -4,6 +4,8 @@ use App\Http\Controllers\ProfileController;
 use Illuminate\Support\Facades\Route;
 use Illuminate\Support\Facades\Auth;
 
+Route::resource('chapters', \App\Http\Controllers\ChapterController::class)->middleware('auth');
+
 Route::get('/', function () {
 
     if (Auth::check()) {

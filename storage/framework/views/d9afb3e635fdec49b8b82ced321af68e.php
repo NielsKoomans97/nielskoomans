@@ -1,10 +1,15 @@
 <?php $__env->startSection('content'); ?>
     <div class="container">
         <div class="col flex-column">
+            <?php if(auth()->guard()->check()): ?>
+                <div class="row pt-2 toolstrip">
+                    <a href="<?php echo e(route('chapters.create')); ?>">
+                        <i class="ti ti-playlist-add"></i> Nieuw hoofdstuk
+                    </a>
+                </div>
+            <?php endif; ?>
+
             <div class="row pt-3">
-                <h4 class="padding">Hoofdstukken</h4>
-            </div>
-            <div class="row padding-y">
                 <?php if(auth()->guard()->check()): ?>
                     <?php $__currentLoopData = $chapters; $__env->addLoop($__currentLoopData); foreach($__currentLoopData as $chapter): $__env->incrementLoopIndices(); $loop = $__env->getLastLoop(); ?>
                         <div class="col-md-4 mb-4">

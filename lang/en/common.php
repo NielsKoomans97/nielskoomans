@@ -20,4 +20,6 @@ return [
     'register' => 'Registreren',
     'logout' => 'Uitloggen',
     'profile' => 'Profiel',
+    'chapters' => 'Hoofdstukken',
+    'create' => 'Nieuw',
 ];

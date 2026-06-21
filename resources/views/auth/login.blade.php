@@ -22,7 +22,7 @@
                                 <label for="email" class="form-label">
                                     <small><b>E-mailadres</b></small>
                                 </label>
-                                <input type="email" name="email" id="email" class="form-control mb-1" required
+                                <input type="email" name="email" id="email" class="mb-1" required
                                     autofocus>
                                 @error('email')
                                     <label>
@@ -35,7 +35,7 @@
                                 <label for="password" class="form-label">
                                     <small><b>Wachtwoord</b></small>
                                 </label>
-                                <input type="password" name="password" id="password" class="form-control mb-1" required>
+                                <input type="password" name="password" id="password" class="mb-1" required>
                                 @error('password')
                                     <label>
                                         <small><i class="ti ti-info-circle me-2"></i><b>{{ $message }}</b></small>
